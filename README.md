@@ -105,7 +105,7 @@ cargo build
 ```bash
 echo "CREATE DATABASE hecate;" | psql -U postgres
 
-psql -U postgres -f src/schema.sql hecate
+psql -U postgres -f hecate/src/schema.sql hecate
 ```
 
 - This step will also create a database role called `hecate` and `hecate_read`. If
@@ -132,7 +132,7 @@ host replication postgres samenet trust
 - Install frontend dependencies
 
 ```
-cd web/
+cd hecate_ui/
 yarn install
 ```
 
